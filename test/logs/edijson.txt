@@ -1,0 +1,41 @@
+2013-11-11 13:13:47,613 DEBUG - cioa
+2013-11-11 13:13:47,618 DEBUG - table://profiling/groups
+2013-11-11 13:13:47,618 DEBUG - n0v4t1
+2013-11-11 13:13:47,619 DEBUG - 
+2013-11-11 13:14:21,376 ERROR - POST table://profiling/groups - Impossibile inserire il valore NULL nella colonna 'name' della tabella 'webtracking.profiling.groups'. La colonna non ammette valori Null. INSERT avrà esito negativo.
+System.Data.SqlClient.SqlException (0x80131904): Impossibile inserire il valore NULL nella colonna 'name' della tabella 'webtracking.profiling.groups'. La colonna non ammette valori Null. INSERT avrà esito negativo.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   in System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   in System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   in System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   in System.Data.SqlClient.SqlDataReader.Read()
+   in System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   in System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   in System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   in System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   in System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   in System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   in Edijson.Core.Database.ExecuteStoredProcedure(String storedprocedure, Hashtable parameters, SqlConnection connection, SqlTransaction transaction) in D:\eurekaa\progetti\edijson.net\core\database.cs:riga 178
+   in Edijson.Rest.Table(String verb, String uri, Hashtable parameters, Hashtable options, HttpContext context) in D:\eurekaa\progetti\edijson.net\rest.cs:riga 218
+2013-11-11 18:22:59,871 ERROR - POST table://profiling/groups - Impossibile inserire il valore NULL nella colonna 'name' della tabella 'webtracking.profiling.groups'. La colonna non ammette valori Null. INSERT avrà esito negativo.
+System.Data.SqlClient.SqlException (0x80131904): Impossibile inserire il valore NULL nella colonna 'name' della tabella 'webtracking.profiling.groups'. La colonna non ammette valori Null. INSERT avrà esito negativo.
+   in System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   in System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   in System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   in System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   in System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   in System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   in System.Data.SqlClient.SqlDataReader.Read()
+   in System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   in System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   in System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   in System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   in System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   in System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   in Edijson.Core.Database.ExecuteStoredProcedure(String storedprocedure, Hashtable parameters, SqlConnection connection, SqlTransaction transaction) in D:\eurekaa\progetti\edijson.net\core\database.cs:riga 178
+   in Edijson.Rest.Table(String verb, String uri, Hashtable parameters, Hashtable options, HttpContext context) in D:\eurekaa\progetti\edijson.net\rest.cs:riga 213
+2013-11-11 18:47:26,060 DEBUG - POST table://profiling/groups
+2013-11-11 18:47:26,060 DEBUG - POST table://profiling/groups
+2013-11-11 18:48:54,763 DEBUG - POST table://profiling/groups

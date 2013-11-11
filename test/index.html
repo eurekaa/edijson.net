@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+    <title>Edijson Test</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20121008/json2.js"></script>
+    
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $.post('/edijson/table/profiling/groups', {
+                EDIJSON_SECURITY_USERNAME: 'n0v4t1',
+                EDIJSON_SECURITY_PASSWORD: 'aa389a8231c5370ab0c38e9fd4e0d17a',
+                parameters: JSON.stringify({
+                    name: 'admin'
+                })
+            }, function (result) {
+                console.dir(result);               
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

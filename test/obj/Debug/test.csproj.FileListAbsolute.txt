@@ -1,0 +1,9 @@
+D:\eurekaa\progetti\edijson.net\test\bin\test.dll
+D:\eurekaa\progetti\edijson.net\test\bin\test.pdb
+D:\eurekaa\progetti\edijson.net\test\obj\Debug\ResolveAssemblyReference.cache
+D:\eurekaa\progetti\edijson.net\test\obj\Debug\test.dll
+D:\eurekaa\progetti\edijson.net\test\obj\Debug\test.pdb
+D:\eurekaa\progetti\edijson.net\test\bin\Edijson.dll
+D:\eurekaa\progetti\edijson.net\test\bin\log4net.dll
+D:\eurekaa\progetti\edijson.net\test\bin\JsonFx.Json.dll
+D:\eurekaa\progetti\edijson.net\test\bin\Edijson.pdb
