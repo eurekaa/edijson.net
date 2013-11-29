@@ -47,13 +47,17 @@ namespace Edijson {
             string uri = "";
             try {
                 Security.Run(context); // controlla gli accessi al rest service                
-                string[] path = context.Request.Path.Substring(1, context.Request.Path.Length - 1).Split('/');                
-                uri = path[1] + "://";                
-                uri += (path.Length > 2) ? path[2] + "/" + path[3] : "";                                
+
+                Hashtable parameters = (context.Request["parameters"] != null && context.Request["parameters"] != "undefined") ? Serializer.UnserializeObject(context.Request["parameters"], typeof(Hashtable), SerializationType.JSON) : new Hashtable();
+
+                // ex: edijson/table/profiling/accounts
+                string[] path = context.Request["url"].ToString().Split('/');
+                uri = path[1] + "://";
+                uri += (path.Length > 2) ? path[2] + "/" + path[3] : "";
                 uri += (path.Length == 5) ? "/" + path[4] : "";
                 string method_name = Utils.Capitalize(path[1]);
 
-                Hashtable parameters = (context.Request["parameters"] != null && context.Request["parameters"] != "undefined") ? Serializer.UnserializeObject(context.Request["parameters"], typeof(Hashtable), SerializationType.JSON) : new Hashtable();
+
                 Hashtable options = (context.Request["options"] != null && context.Request["options"] != "undefined") ? Serializer.UnserializeObject(context.Request["options"], typeof(Hashtable), SerializationType.JSON) : new Hashtable();
                 verb = (options["verb"] == null) ? context.Request.HttpMethod.ToString().ToUpper() : options["verb"].ToString().ToUpper();
                 Type type = this.GetType();
@@ -175,6 +179,7 @@ namespace Edijson {
         /// <param name="options">Hashtable: opzioni della chiamata (outputType, paginazione, transazioni, ecc..).</param>
         /// <param name="context">HttpContext: contesto della chiamata http.</param>
         public void Table(String verb, String uri, Hashtable parameters, Hashtable options, HttpContext context) {
+            log.Debug(uri);
             String[] path = uri.Split(new string[] { "://" }, StringSplitOptions.RemoveEmptyEntries)[1].Split('/');
             string outputType = (options["outputType"] != null) ? options["outputType"].ToString() : "json";
             string schema = path[0];
